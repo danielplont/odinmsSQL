@@ -156,3 +156,34 @@ java.lang.NullPointerException
 
 Nov 21, 2018 9:56:39 AM net.sf.odinms.net.login.LoginWorker run
 
+
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:15 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.channel.ChannelServer run
+INFO: Channel 1: Listening on port 8888
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.world.WorldChannelInterfaceImpl serverReady
+INFO: Channel 1 is online.
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.channel.ChannelServer run
+INFO: Channel 2: Listening on port 7576
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.world.WorldChannelInterfaceImpl serverReady
+INFO: Channel 2 is online.
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:16 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:17 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:17 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:17 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:18 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:18 PM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 3:43:18 PM net.sf.odinms.net.login.LoginWorker run
