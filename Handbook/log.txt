@@ -1,0 +1,158 @@
+Nov 21, 2018 9:53:21 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:21 AM net.sf.odinms.net.login.LoginServer run
+INFO: Listening on port 8484
+Nov 21, 2018 9:53:21 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:22 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:27 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:28 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:28 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:28 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:28 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:29 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:29 AM net.sf.odinms.net.MapleServerHandler sessionOpened
+INFO: IoSession with /127.0.0.1:53450 opened
+Nov 21, 2018 9:53:29 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:29 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:30 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+INFO: Possible logins: 50 (Waiting: 1)
+Nov 21, 2018 9:53:43 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:44 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:44 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:44 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:44 AM net.sf.odinms.net.MapleServerHandler messageReceived
+INFO: Got unhandeled Message  (7) 11 00 01 E3 48 48 F1
+...πHH±
+Nov 21, 2018 9:53:45 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:45 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:45 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:46 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:46 AM net.sf.odinms.net.login.handler.CharlistRequestHandler handlePacket
+INFO: Client is connecting to server 0 channel 1
+Nov 21, 2018 9:53:46 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:46 AM net.sf.odinms.net.login.LoginWorker run
+Nov 21, 2018 9:53:50 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:50 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:50 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:51 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:51 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:51 AM net.sf.odinms.net.MapleServerHandler sessionOpened
+INFO: IoSession with /127.0.0.1:53461 opened
+Nov 21, 2018 9:53:51 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:58 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:58 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:58 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:59 AM net.sf.odinms.net.MapleServerHandler messageReceived
+SEVERE: (Account: danieL) Exception during processing packet: net.sf.odinms.net.login.handler.LoginPasswordHandler: null
+java.lang.NullPointerException
+        at net.sf.odinms.net.login.handler.LoginPasswordHandler.handlePacket(LoginPasswordHandler.java:74)
+        at net.sf.odinms.net.MapleServerHandler.messageReceived(MapleServerHandler.java:150)
+        at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+        at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:180)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:220)
+        at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:264)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+        at java.lang.Thread.run(Thread.java:745)
+
+Nov 21, 2018 9:53:59 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:59 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:53:59 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:55:03 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:55:03 AM net.sf.odinms.net.MapleServerHandler messageReceived
+SEVERE: (Account: danieL) Exception during processing packet: net.sf.odinms.net.login.handler.LoginPasswordHandler: null
+java.lang.NullPointerException
+        at net.sf.odinms.net.login.handler.LoginPasswordHandler.handlePacket(LoginPasswordHandler.java:74)
+        at net.sf.odinms.net.MapleServerHandler.messageReceived(MapleServerHandler.java:150)
+        at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+        at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:180)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:220)
+        at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:264)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+        at java.lang.Thread.run(Thread.java:745)
+
+Nov 21, 2018 9:55:03 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:55:03 AM net.sf.odinms.net.login.LoginWorker run
+
+Nov 21, 2018 9:55:25 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:55:25 AM net.sf.odinms.net.MapleServerHandler messageReceived
+INFO: Got unhandeled Message  (7) 11 00 01 F7 A0 0E 3C
+...≈á.<
+Nov 21, 2018 9:55:25 AM net.sf.odinms.net.login.LoginWorker run
+INFO: Possible logins: 50 (Waiting: 0)
+Nov 21, 2018 9:56:39 AM net.sf.odinms.net.MapleServerHandler messageReceived
+SEVERE: (Account: danieL) Exception during processing packet: net.sf.odinms.net.login.handler.LoginPasswordHandler: null
+java.lang.NullPointerException
+        at net.sf.odinms.net.login.handler.LoginPasswordHandler.handlePacket(LoginPasswordHandler.java:74)
+        at net.sf.odinms.net.MapleServerHandler.messageReceived(MapleServerHandler.java:150)
+        at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+        at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:180)
+        at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+        at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+        at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+        at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:220)
+        at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:264)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+        at java.lang.Thread.run(Thread.java:745)
+
+Nov 21, 2018 9:56:39 AM net.sf.odinms.net.login.LoginWorker run
+
