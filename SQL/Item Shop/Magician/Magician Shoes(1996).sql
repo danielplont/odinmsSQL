@@ -1,0 +1,25 @@
+/* Shoes */
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072140, 500000, 1);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072141, 500000, 2);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072142, 500000, 3);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072143, 500000, 4);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072136, 600000, 5);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072137, 600000, 6);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072138, 600000, 7);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072139, 600000, 8);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072157, 700000, 9);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072158, 700000, 10);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072159, 700000, 11);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072160, 700000, 12);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072177, 800000, 13);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072178, 800000, 14);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072179, 800000, 15);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072206, 900000, 16);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072207, 900000, 17);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072208, 900000, 18);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072209, 900000, 19);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072223, 1800000, 20);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072224, 1800000, 21);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072225, 1800000, 22);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072226, 1800000, 23);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1996, 1072268, 15000000, 24);

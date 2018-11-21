@@ -1,0 +1,45 @@
+/*Made By Yan of HeavenlyMS
+Odinms v55 ,Costum Shops*/
+/* Overall */
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050051, 1000000, 1);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050052, 1000000, 2);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051037, 1000000, 3);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051038, 1000000, 4);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051039, 1000000, 5);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050058, 3000000, 6);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050059, 3000000, 7);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050060, 3000000, 8);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051041, 3000000, 9);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051042, 3000000, 10);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051043, 3000000, 11);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050061, 5000000, 12);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050062, 5000000, 13);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050063, 5000000, 14);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050064, 5000000, 15);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051062, 5000000, 16);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051063, 5000000, 17);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051064, 5000000, 18);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051065, 5000000, 19);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050075, 8000000, 20);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050076, 8000000, 21);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050077, 8000000, 22);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050078, 8000000, 23);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051066, 8000000, 24);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051067, 8000000, 25);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051068, 8000000, 26);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051069, 8000000, 27);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050088, 12000000, 28);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050089, 12000000, 29);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050090, 12000000, 30);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050091, 12000000, 31);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051082, 12000000, 32);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051083, 12000000, 33);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051084, 12000000, 34);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051085, 12000000, 35);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050106, 18000000, 36);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050107, 18000000, 37);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1050108, 18000000, 38);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051105, 18000000, 39);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051106, 18000000, 40);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1051107, 18000000, 41);
+INSERT INTO shopitems (shopid, itemid, price, position) VALUES (2020, 1052071, 45000000, 42);
