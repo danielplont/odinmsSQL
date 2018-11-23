@@ -43,12 +43,13 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   UNIQUE KEY `name` (`name`),
   KEY `forumaccid` (`forumaccid`),
   KEY `ranking1` (`id`,`banned`,`gm`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.accounts: ~1 rows (approximately)
+-- Dumping data for table odinms.accounts: ~2 rows (approximately)
 /*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
 INSERT INTO `accounts` (`id`, `name`, `password`, `salt`, `loggedin`, `lastlogin`, `createdat`, `birthday`, `banned`, `tempban`, `greason`, `banreason`, `gm`, `email`, `emailcode`, `forumaccid`, `macs`, `lastknownip`, `lastpwemail`, `nxCash`, `mPoints`, `gTokens`) VALUES
-	(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', NULL, 0, '2008-04-26 08:15:30', '2008-04-26 08:15:30', '2008-04-26', 0, 0, NULL, '', 1, NULL, NULL, 0, '', '', '2002-12-31 18:00:00', NULL, NULL, NULL);
+	(1, 'admin', '9c43042c0d637f66553ce97e0fafd61acf048daefacb2a87fd41af9a272d6aac8b473b4166538037b6f9d70d4e41bbc25a983edef3c8e7f95cfff130d96c2423', '768e123e7ac0ad0c3755ef68795cccb2', 0, '2018-11-22 11:29:29', '2008-04-26 08:15:30', '2008-04-26', 0, 0, NULL, NULL, 1, NULL, NULL, 0, '60-E3-27-12-83-F0', '127.0.0.1', '2002-12-31 18:00:00', 0, 0, 0),
+	(5, 'daniel', '98c08016f57f8dabdd91f76e09020f5f7d700727b3a9c7d63f694f686444eea124ff1ecdb1737fbe85e0b1adefcf8e9a771cd06d961b3cfb18ab97a24918033d', '4ff9c7b1d654dd6857bbf7cdd06e8314', 0, '2018-11-22 20:11:06', '2018-11-22 10:38:02', '2008-04-07', 0, 0, NULL, NULL, 0, 'no@email.provided', NULL, 0, '60-E3-27-12-83-F0', '47.32.118.38', '2002-12-31 18:00:00', 0, 0, 0);
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.bbs_replies
@@ -178,12 +179,14 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `party` (`party`),
   KEY `ranking1` (`level`,`exp`),
   KEY `ranking2` (`gm`,`job`)
-) ENGINE=InnoDB AUTO_INCREMENT=30001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30006 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.characters: ~1 rows (approximately)
+-- Dumping data for table odinms.characters: ~4 rows (approximately)
 /*!40000 ALTER TABLE `characters` DISABLE KEYS */;
 INSERT INTO `characters` (`id`, `accountid`, `world`, `name`, `level`, `exp`, `str`, `dex`, `luk`, `int`, `hp`, `mp`, `maxhp`, `maxmp`, `meso`, `hpApUsed`, `mpApUsed`, `job`, `skincolor`, `gender`, `fame`, `hair`, `face`, `ap`, `sp`, `map`, `spawnpoint`, `gm`, `party`, `buddyCapacity`, `createdate`, `rank`, `rankMove`, `jobRank`, `jobRankMove`, `guildid`, `guildrank`, `messengerid`, `messengerposition`) VALUES
-	(30000, 1, 0, 'Admin', 200, 0, 999, 999, 999, 999, 30000, 30000, 30000, 30000, 10000000, 0, 0, 510, 0, 0, 0, 30000, 20000, 100, 100, 0, 0, 1, 0, 25, '2008-04-26 08:26:47', 1, 0, 1, 0, 0, 5, 0, 4);
+	(30000, 1, 0, 'Admin', 200, 0, 10, 10, 10, 10, 30000, 30000, 30000, 30000, 10000000, 0, 0, 510, 0, 0, 0, 30000, 20000, 4076, 100, 100000000, 0, 1, -1, 25, '2008-04-26 08:26:47', 1, 0, 1, 0, 0, 5, 0, 4),
+	(30002, 5, 0, 'Daniel', 29, 32163, 10, 145, 10, 10, 593, 557, 593, 635, 1088274, 0, 0, 300, 2, 1, 0, 31000, 21001, 10, 6, 800020110, 0, 0, -1, 25, '2018-11-22 11:15:04', 1, 0, 1, 0, 0, 5, 0, 4),
+	(30005, 5, 0, 'Fuck', 10, 253, 10, 25, 45, 10, 188, 159, 188, 159, 12999880, 0, 0, 400, 0, 0, 0, 30135, 20001, 0, 0, 103000003, 0, 0, -1, 25, '2018-11-22 20:01:00', 1, 0, 1, 0, 0, 5, 0, 4);
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.cheatlog
@@ -196,10 +199,23 @@ CREATE TABLE IF NOT EXISTS `cheatlog` (
   `param` tinytext NOT NULL,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.cheatlog: ~0 rows (approximately)
+-- Dumping data for table odinms.cheatlog: ~12 rows (approximately)
 /*!40000 ALTER TABLE `cheatlog` DISABLE KEYS */;
+INSERT INTO `cheatlog` (`id`, `cid`, `offense`, `count`, `lastoffensetime`, `param`) VALUES
+	(1, 30001, 'MOVE_MONSTERS', 1, '2018-11-22 11:08:00', ''),
+	(2, 30001, 'MOVE_MONSTERS', 3, '2018-11-22 11:12:57', ''),
+	(3, 30002, 'MOVE_MONSTERS', 3, '2018-11-22 11:15:53', ''),
+	(4, 30003, 'MOVE_MONSTERS', 1, '2018-11-22 11:16:43', ''),
+	(5, 30002, 'MOVE_MONSTERS', 8, '2018-11-22 11:22:40', ''),
+	(6, 30002, 'MOVE_MONSTERS', 13, '2018-11-22 11:34:22', ''),
+	(7, 30002, 'MOVE_MONSTERS', 1, '2018-11-22 11:35:45', ''),
+	(8, 30002, 'MOVE_MONSTERS', 1, '2018-11-22 11:36:53', ''),
+	(9, 30002, 'MOVE_MONSTERS', 1, '2018-11-22 11:59:28', ''),
+	(10, 30005, 'SAME_DAMAGE', 19, '2018-11-22 20:03:40', '20 times: 3'),
+	(11, 30005, 'MOVE_MONSTERS', 3, '2018-11-22 20:05:52', ''),
+	(12, 30005, 'MOVE_MONSTERS', 5, '2018-11-22 20:08:40', '');
 /*!40000 ALTER TABLE `cheatlog` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.eventstats
@@ -239,10 +255,15 @@ CREATE TABLE IF NOT EXISTS `gmlog` (
   `command` tinytext NOT NULL,
   `when` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.gmlog: ~0 rows (approximately)
+-- Dumping data for table odinms.gmlog: ~4 rows (approximately)
 /*!40000 ALTER TABLE `gmlog` DISABLE KEYS */;
+INSERT INTO `gmlog` (`id`, `cid`, `command`, `when`) VALUES
+	(1, 30000, '!item 10732238', '2018-11-22 11:26:41'),
+	(2, 30000, '!item 1072238 1', '2018-11-22 11:27:43'),
+	(3, 30000, '!item 1072239 1', '2018-11-22 11:27:43'),
+	(4, 30000, '!item 1071002 1', '2018-11-22 11:28:45');
 /*!40000 ALTER TABLE `gmlog` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.guilds
@@ -294,10 +315,53 @@ CREATE TABLE IF NOT EXISTS `inventoryequipment` (
   PRIMARY KEY (`inventoryequipmentid`),
   KEY `inventoryitemid` (`inventoryitemid`),
   CONSTRAINT `inventoryequipment_ibfk_1` FOREIGN KEY (`inventoryitemid`) REFERENCES `inventoryitems` (`inventoryitemid`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=170 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.inventoryequipment: ~0 rows (approximately)
+-- Dumping data for table odinms.inventoryequipment: ~50 rows (approximately)
 /*!40000 ALTER TABLE `inventoryequipment` DISABLE KEYS */;
+INSERT INTO `inventoryequipment` (`inventoryequipmentid`, `inventoryitemid`, `upgradeslots`, `level`, `str`, `dex`, `int`, `luk`, `hp`, `mp`, `watk`, `matk`, `wdef`, `mdef`, `acc`, `avoid`, `hands`, `speed`, `jump`) VALUES
+	(88, 764, 10, 0, 15, 15, 15, 15, 0, 0, 0, 0, 150, 150, 20, 20, 0, 0, 0),
+	(89, 765, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 10, 0, 0, 0),
+	(90, 766, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+	(91, 767, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 20, 0, 0, 0, 5, 5),
+	(92, 768, 7, 0, 0, 3, 3, 0, 0, 0, 0, 0, 30, 10, 0, 0, 0, 0, 0),
+	(93, 769, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+	(94, 821, 7, 0, 999, 999, 999, 999, 0, 0, 0, 0, 200, 200, 200, 200, 0, 30, 50),
+	(95, 822, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 10, 0, 0, 0),
+	(96, 823, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+	(97, 824, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 0, 0, 0, 0, 0),
+	(127, 982, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 10, 0, 0, 0),
+	(128, 983, 0, 7, 99, 99, 99, 99, 0, 0, 21, 0, 20, 20, 99, 20, 0, 0, 0),
+	(129, 984, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 0, 0, 0, 0, 0),
+	(130, 985, 7, 0, 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 7, 0),
+	(131, 986, 7, 0, 3, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0),
+	(132, 987, 7, 0, 0, 3, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 0),
+	(133, 988, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0),
+	(134, 989, 10, 0, 0, 0, 0, 0, 14, 0, 0, 0, 39, 0, 0, 0, 0, 0, 0),
+	(135, 990, 7, 0, 0, 0, 0, 0, 0, 0, 77, 0, 0, 0, 0, 0, 0, 0, 2),
+	(136, 991, 7, 0, 0, 0, 0, 0, 0, 11, 0, 0, 27, 0, 0, 0, 0, 0, 0),
+	(137, 992, 7, 0, 0, 0, 0, 0, 0, 10, 0, 0, 25, 0, 0, 0, 0, 0, 0),
+	(138, 993, 7, 0, 0, 1, 0, 0, 0, 0, 0, 0, 45, 0, 1, 0, 0, 0, 0),
+	(139, 994, 7, 0, 0, 0, 0, 0, 0, 10, 0, 0, 24, 0, 0, 0, 0, 0, 0),
+	(140, 995, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 0, 1, 0, 0, 0, 0),
+	(141, 996, 7, 0, 0, 2, 0, 0, 0, 9, 0, 0, 27, 0, 0, 0, 0, 0, 0),
+	(142, 997, 10, 0, 0, 0, 5, 2, 0, 20, 0, 0, 46, 19, 0, 0, 0, 0, 0),
+	(143, 998, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0),
+	(144, 999, 10, 0, 0, 0, 2, 4, 0, 18, 0, 0, 49, 25, 0, 0, 0, 0, 0),
+	(145, 1088, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0),
+	(146, 1089, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0),
+	(147, 1090, 0, 7, 99, 99, 99, 99, 0, 0, 21, 0, 20, 20, 99, 20, 0, 40, 23),
+	(148, 1091, 7, 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0),
+	(149, 1092, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0),
+	(150, 1093, 7, 0, 0, 0, 0, 0, 0, 2, 0, 0, 13, 0, 0, 0, 0, 0, 0),
+	(162, 1157, 7, 0, 99, 99, 99, 99, 0, 0, 0, 0, 20, 20, 99, 20, 0, 40, 23),
+	(163, 1158, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 10, 0, 0, 0),
+	(164, 1159, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 10, 0, 0, 0),
+	(165, 1160, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 0, 0, 0, 0, 0),
+	(166, 1213, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0),
+	(167, 1214, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0),
+	(168, 1215, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0),
+	(169, 1216, 7, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0);
 /*!40000 ALTER TABLE `inventoryequipment` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.inventoryitems
@@ -317,10 +381,344 @@ CREATE TABLE IF NOT EXISTS `inventoryitems` (
   KEY `storageid` (`storageid`),
   KEY `characterid_2` (`characterid`,`inventorytype`),
   CONSTRAINT `inventoryitems_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1217 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.inventoryitems: ~0 rows (approximately)
+-- Dumping data for table odinms.inventoryitems: ~343 rows (approximately)
 /*!40000 ALTER TABLE `inventoryitems` DISABLE KEYS */;
+INSERT INTO `inventoryitems` (`inventoryitemid`, `characterid`, `storageid`, `itemid`, `inventorytype`, `position`, `quantity`, `owner`) VALUES
+	(664, 30000, NULL, 10732238, 0, 1, 0, 'Admin'),
+	(665, 30000, NULL, 10732238, 0, 2, 0, 'Admin'),
+	(666, 30000, NULL, 10732238, 0, 3, 0, 'Admin'),
+	(667, 30000, NULL, 10732238, 0, 4, 0, 'Admin'),
+	(668, 30000, NULL, 10732238, 0, 5, 0, 'Admin'),
+	(669, 30000, NULL, 10732238, 0, 6, 0, 'Admin'),
+	(670, 30000, NULL, 10732238, 0, 7, 0, 'Admin'),
+	(671, 30000, NULL, 10732238, 0, 8, 0, 'Admin'),
+	(672, 30000, NULL, 10732238, 0, 9, 0, 'Admin'),
+	(673, 30000, NULL, 10732238, 0, 10, 0, 'Admin'),
+	(674, 30000, NULL, 10732238, 0, 11, 0, 'Admin'),
+	(675, 30000, NULL, 10732238, 0, 12, 0, 'Admin'),
+	(676, 30000, NULL, 10732238, 0, 13, 0, 'Admin'),
+	(677, 30000, NULL, 10732238, 0, 14, 0, 'Admin'),
+	(678, 30000, NULL, 10732238, 0, 15, 0, 'Admin'),
+	(679, 30000, NULL, 10732238, 0, 16, 0, 'Admin'),
+	(680, 30000, NULL, 10732238, 0, 17, 0, 'Admin'),
+	(681, 30000, NULL, 10732238, 0, 18, 0, 'Admin'),
+	(682, 30000, NULL, 10732238, 0, 19, 0, 'Admin'),
+	(683, 30000, NULL, 10732238, 0, 20, 0, 'Admin'),
+	(684, 30000, NULL, 10732238, 0, 21, 0, 'Admin'),
+	(685, 30000, NULL, 10732238, 0, 22, 0, 'Admin'),
+	(686, 30000, NULL, 10732238, 0, 23, 0, 'Admin'),
+	(687, 30000, NULL, 10732238, 0, 24, 0, 'Admin'),
+	(688, 30000, NULL, 10732238, 0, 25, 0, 'Admin'),
+	(689, 30000, NULL, 10732238, 0, 26, 0, 'Admin'),
+	(690, 30000, NULL, 10732238, 0, 27, 0, 'Admin'),
+	(691, 30000, NULL, 10732238, 0, 28, 0, 'Admin'),
+	(692, 30000, NULL, 10732238, 0, 29, 0, 'Admin'),
+	(693, 30000, NULL, 10732238, 0, 30, 0, 'Admin'),
+	(694, 30000, NULL, 10732238, 0, 31, 0, 'Admin'),
+	(695, 30000, NULL, 10732238, 0, 32, 0, 'Admin'),
+	(696, 30000, NULL, 10732238, 0, 33, 0, 'Admin'),
+	(697, 30000, NULL, 10732238, 0, 34, 0, 'Admin'),
+	(698, 30000, NULL, 10732238, 0, 35, 0, 'Admin'),
+	(699, 30000, NULL, 10732238, 0, 36, 0, 'Admin'),
+	(700, 30000, NULL, 10732238, 0, 37, 0, 'Admin'),
+	(701, 30000, NULL, 10732238, 0, 38, 0, 'Admin'),
+	(702, 30000, NULL, 10732238, 0, 39, 0, 'Admin'),
+	(703, 30000, NULL, 10732238, 0, 40, 0, 'Admin'),
+	(704, 30000, NULL, 10732238, 0, 41, 0, 'Admin'),
+	(705, 30000, NULL, 10732238, 0, 42, 0, 'Admin'),
+	(706, 30000, NULL, 10732238, 0, 43, 0, 'Admin'),
+	(707, 30000, NULL, 10732238, 0, 44, 0, 'Admin'),
+	(708, 30000, NULL, 10732238, 0, 45, 0, 'Admin'),
+	(709, 30000, NULL, 10732238, 0, 46, 0, 'Admin'),
+	(710, 30000, NULL, 10732238, 0, 47, 0, 'Admin'),
+	(711, 30000, NULL, 10732238, 0, 48, 0, 'Admin'),
+	(712, 30000, NULL, 10732238, 0, 49, 0, 'Admin'),
+	(713, 30000, NULL, 10732238, 0, 50, 0, 'Admin'),
+	(714, 30000, NULL, 10732238, 0, 51, 0, 'Admin'),
+	(715, 30000, NULL, 10732238, 0, 52, 0, 'Admin'),
+	(716, 30000, NULL, 10732238, 0, 53, 0, 'Admin'),
+	(717, 30000, NULL, 10732238, 0, 54, 0, 'Admin'),
+	(718, 30000, NULL, 10732238, 0, 55, 0, 'Admin'),
+	(719, 30000, NULL, 10732238, 0, 56, 0, 'Admin'),
+	(720, 30000, NULL, 10732238, 0, 57, 0, 'Admin'),
+	(721, 30000, NULL, 10732238, 0, 58, 0, 'Admin'),
+	(722, 30000, NULL, 10732238, 0, 59, 0, 'Admin'),
+	(723, 30000, NULL, 10732238, 0, 60, 0, 'Admin'),
+	(724, 30000, NULL, 10732238, 0, 61, 0, 'Admin'),
+	(725, 30000, NULL, 10732238, 0, 62, 0, 'Admin'),
+	(726, 30000, NULL, 10732238, 0, 63, 0, 'Admin'),
+	(727, 30000, NULL, 10732238, 0, 64, 0, 'Admin'),
+	(728, 30000, NULL, 10732238, 0, 65, 0, 'Admin'),
+	(729, 30000, NULL, 10732238, 0, 66, 0, 'Admin'),
+	(730, 30000, NULL, 10732238, 0, 67, 0, 'Admin'),
+	(731, 30000, NULL, 10732238, 0, 68, 0, 'Admin'),
+	(732, 30000, NULL, 10732238, 0, 69, 0, 'Admin'),
+	(733, 30000, NULL, 10732238, 0, 70, 0, 'Admin'),
+	(734, 30000, NULL, 10732238, 0, 71, 0, 'Admin'),
+	(735, 30000, NULL, 10732238, 0, 72, 0, 'Admin'),
+	(736, 30000, NULL, 10732238, 0, 73, 0, 'Admin'),
+	(737, 30000, NULL, 10732238, 0, 74, 0, 'Admin'),
+	(738, 30000, NULL, 10732238, 0, 75, 0, 'Admin'),
+	(739, 30000, NULL, 10732238, 0, 76, 0, 'Admin'),
+	(740, 30000, NULL, 10732238, 0, 77, 0, 'Admin'),
+	(741, 30000, NULL, 10732238, 0, 78, 0, 'Admin'),
+	(742, 30000, NULL, 10732238, 0, 79, 0, 'Admin'),
+	(743, 30000, NULL, 10732238, 0, 80, 0, 'Admin'),
+	(744, 30000, NULL, 10732238, 0, 81, 0, 'Admin'),
+	(745, 30000, NULL, 10732238, 0, 82, 0, 'Admin'),
+	(746, 30000, NULL, 10732238, 0, 83, 0, 'Admin'),
+	(747, 30000, NULL, 10732238, 0, 84, 0, 'Admin'),
+	(748, 30000, NULL, 10732238, 0, 85, 0, 'Admin'),
+	(749, 30000, NULL, 10732238, 0, 86, 0, 'Admin'),
+	(750, 30000, NULL, 10732238, 0, 87, 0, 'Admin'),
+	(751, 30000, NULL, 10732238, 0, 88, 0, 'Admin'),
+	(752, 30000, NULL, 10732238, 0, 89, 0, 'Admin'),
+	(753, 30000, NULL, 10732238, 0, 90, 0, 'Admin'),
+	(754, 30000, NULL, 10732238, 0, 91, 0, 'Admin'),
+	(755, 30000, NULL, 10732238, 0, 92, 0, 'Admin'),
+	(756, 30000, NULL, 10732238, 0, 93, 0, 'Admin'),
+	(757, 30000, NULL, 10732238, 0, 94, 0, 'Admin'),
+	(758, 30000, NULL, 10732238, 0, 95, 0, 'Admin'),
+	(759, 30000, NULL, 10732238, 0, 96, 0, 'Admin'),
+	(760, 30000, NULL, 10732238, 0, 97, 0, 'Admin'),
+	(761, 30000, NULL, 10732238, 0, 98, 0, 'Admin'),
+	(762, 30000, NULL, 10732238, 0, 99, 0, 'Admin'),
+	(763, 30000, NULL, 10732238, 0, 100, 0, 'Admin'),
+	(764, 30000, NULL, 1002357, 1, 2, 1, ''),
+	(765, 30000, NULL, 1051017, 1, 4, 1, ''),
+	(766, 30000, NULL, 1702154, 1, 6, 1, ''),
+	(767, 30000, NULL, 1072238, 1, 1, 1, 'Admin'),
+	(768, 30000, NULL, 1072239, 1, 3, 1, 'Admin'),
+	(769, 30000, NULL, 1071002, 1, 5, 1, 'Admin'),
+	(770, 30000, NULL, 2040807, 2, 1, 7, ''),
+	(771, 30000, NULL, 2000005, 2, 2, 100, ''),
+	(772, 30000, NULL, 2000005, 2, 3, 100, ''),
+	(773, 30000, NULL, 2000005, 2, 4, 100, ''),
+	(774, 30000, NULL, 2000005, 2, 5, 100, ''),
+	(775, 30000, NULL, 2000005, 2, 6, 100, ''),
+	(776, 30000, NULL, 2000005, 2, 7, 100, ''),
+	(777, 30000, NULL, 2000005, 2, 8, 100, ''),
+	(778, 30000, NULL, 2000005, 2, 9, 100, ''),
+	(779, 30000, NULL, 2000005, 2, 10, 100, ''),
+	(780, 30000, NULL, 2000005, 2, 11, 100, ''),
+	(781, 30000, NULL, 2000005, 2, 12, 100, ''),
+	(782, 30000, NULL, 2000005, 2, 13, 100, ''),
+	(783, 30000, NULL, 2000005, 2, 14, 100, ''),
+	(784, 30000, NULL, 2000005, 2, 15, 100, ''),
+	(785, 30000, NULL, 2000005, 2, 16, 100, ''),
+	(786, 30000, NULL, 2000005, 2, 17, 100, ''),
+	(787, 30000, NULL, 2000005, 2, 18, 100, ''),
+	(788, 30000, NULL, 2000005, 2, 19, 100, ''),
+	(789, 30000, NULL, 2000005, 2, 20, 100, ''),
+	(790, 30000, NULL, 2000005, 2, 21, 100, ''),
+	(791, 30000, NULL, 2000005, 2, 22, 100, ''),
+	(792, 30000, NULL, 2000005, 2, 23, 100, ''),
+	(793, 30000, NULL, 2000005, 2, 24, 100, ''),
+	(794, 30000, NULL, 2000005, 2, 25, 100, ''),
+	(795, 30000, NULL, 2000005, 2, 26, 100, ''),
+	(796, 30000, NULL, 2000005, 2, 27, 100, ''),
+	(797, 30000, NULL, 2000005, 2, 28, 100, ''),
+	(798, 30000, NULL, 2000005, 2, 29, 100, ''),
+	(799, 30000, NULL, 2000005, 2, 30, 100, ''),
+	(800, 30000, NULL, 2000005, 2, 31, 100, ''),
+	(801, 30000, NULL, 2000005, 2, 32, 100, ''),
+	(802, 30000, NULL, 2000005, 2, 33, 100, ''),
+	(803, 30000, NULL, 2000005, 2, 34, 100, ''),
+	(804, 30000, NULL, 2000005, 2, 35, 100, ''),
+	(805, 30000, NULL, 2000005, 2, 36, 100, ''),
+	(806, 30000, NULL, 2000005, 2, 37, 100, ''),
+	(807, 30000, NULL, 2000005, 2, 38, 100, ''),
+	(808, 30000, NULL, 2000005, 2, 39, 100, ''),
+	(809, 30000, NULL, 2000005, 2, 40, 100, ''),
+	(810, 30000, NULL, 2000005, 2, 41, 100, ''),
+	(811, 30000, NULL, 2000005, 2, 42, 100, ''),
+	(812, 30000, NULL, 2000005, 2, 43, 100, ''),
+	(813, 30000, NULL, 2000005, 2, 44, 100, ''),
+	(814, 30000, NULL, 2000005, 2, 45, 100, ''),
+	(815, 30000, NULL, 2000005, 2, 46, 100, ''),
+	(816, 30000, NULL, 2000005, 2, 47, 100, ''),
+	(817, 30000, NULL, 2000005, 2, 48, 100, ''),
+	(818, 30000, NULL, 2000005, 2, 49, 100, ''),
+	(819, 30000, NULL, 2000005, 2, 50, 100, ''),
+	(820, 30000, NULL, 2000005, 2, 51, 100, ''),
+	(821, 30000, NULL, 1002140, -1, -1, 1, ''),
+	(822, 30000, NULL, 1050018, -1, -5, 1, ''),
+	(823, 30000, NULL, 1082149, -1, -8, 1, ''),
+	(824, 30000, NULL, 1122001, -1, -17, 1, ''),
+	(982, 30002, NULL, 1051017, 1, 3, 1, ''),
+	(983, 30002, NULL, 1082149, 1, 1, 1, ''),
+	(984, 30002, NULL, 1122001, 1, 2, 1, ''),
+	(985, 30002, NULL, 1462014, 1, 4, 1, ''),
+	(986, 30002, NULL, 1040073, 1, 5, 1, ''),
+	(987, 30002, NULL, 1452005, 1, 6, 1, ''),
+	(988, 30002, NULL, 1002172, 1, 7, 1, ''),
+	(989, 30002, NULL, 1050006, 1, 8, 1, ''),
+	(990, 30002, NULL, 1302025, 1, 9, 1, ''),
+	(991, 30002, NULL, 1061080, 1, 10, 1, ''),
+	(992, 30002, NULL, 1061071, 1, 11, 1, ''),
+	(993, 30002, NULL, 1060077, 1, 12, 1, ''),
+	(994, 30002, NULL, 1061071, 1, 13, 1, ''),
+	(995, 30002, NULL, 1060077, 1, 14, 1, ''),
+	(996, 30002, NULL, 1061080, 1, 15, 1, ''),
+	(997, 30002, NULL, 1050048, 1, 16, 1, ''),
+	(998, 30002, NULL, 1032008, 1, 17, 1, ''),
+	(999, 30002, NULL, 1051032, 1, 18, 1, ''),
+	(1000, 30002, NULL, 2000005, 2, 8, 95, ''),
+	(1001, 30002, NULL, 2000005, 2, 9, 100, ''),
+	(1002, 30002, NULL, 2000005, 2, 10, 100, ''),
+	(1003, 30002, NULL, 2000005, 2, 11, 100, ''),
+	(1004, 30002, NULL, 2000005, 2, 12, 100, ''),
+	(1005, 30002, NULL, 2000005, 2, 13, 100, ''),
+	(1006, 30002, NULL, 2000005, 2, 14, 100, ''),
+	(1007, 30002, NULL, 2000005, 2, 15, 100, ''),
+	(1008, 30002, NULL, 2000005, 2, 16, 100, ''),
+	(1009, 30002, NULL, 2000005, 2, 17, 100, ''),
+	(1010, 30002, NULL, 2000005, 2, 18, 100, ''),
+	(1011, 30002, NULL, 2000005, 2, 19, 100, ''),
+	(1012, 30002, NULL, 2000005, 2, 20, 100, ''),
+	(1013, 30002, NULL, 2000005, 2, 21, 100, ''),
+	(1014, 30002, NULL, 2000005, 2, 22, 100, ''),
+	(1015, 30002, NULL, 2000005, 2, 23, 100, ''),
+	(1016, 30002, NULL, 2000005, 2, 24, 100, ''),
+	(1017, 30002, NULL, 2000005, 2, 25, 100, ''),
+	(1018, 30002, NULL, 2000005, 2, 26, 100, ''),
+	(1019, 30002, NULL, 2000005, 2, 27, 100, ''),
+	(1020, 30002, NULL, 2000005, 2, 28, 100, ''),
+	(1021, 30002, NULL, 2000005, 2, 29, 100, ''),
+	(1022, 30002, NULL, 2000005, 2, 30, 100, ''),
+	(1023, 30002, NULL, 2000005, 2, 31, 100, ''),
+	(1024, 30002, NULL, 2000005, 2, 32, 100, ''),
+	(1025, 30002, NULL, 2000005, 2, 33, 100, ''),
+	(1026, 30002, NULL, 2000005, 2, 34, 100, ''),
+	(1027, 30002, NULL, 2000005, 2, 35, 100, ''),
+	(1028, 30002, NULL, 2000005, 2, 36, 100, ''),
+	(1029, 30002, NULL, 2000005, 2, 37, 100, ''),
+	(1030, 30002, NULL, 2000005, 2, 38, 100, ''),
+	(1031, 30002, NULL, 2000005, 2, 39, 100, ''),
+	(1032, 30002, NULL, 2000005, 2, 40, 100, ''),
+	(1033, 30002, NULL, 2000005, 2, 41, 100, ''),
+	(1034, 30002, NULL, 2000005, 2, 42, 100, ''),
+	(1035, 30002, NULL, 2000005, 2, 43, 100, ''),
+	(1036, 30002, NULL, 2000005, 2, 44, 100, ''),
+	(1037, 30002, NULL, 2000005, 2, 45, 100, ''),
+	(1038, 30002, NULL, 2000005, 2, 46, 100, ''),
+	(1039, 30002, NULL, 2000005, 2, 47, 100, ''),
+	(1040, 30002, NULL, 2000005, 2, 48, 100, ''),
+	(1041, 30002, NULL, 2061004, 2, 56, 1000, ''),
+	(1042, 30002, NULL, 2061004, 2, 57, 1000, ''),
+	(1043, 30002, NULL, 2061004, 2, 58, 1000, ''),
+	(1044, 30002, NULL, 2061004, 2, 59, 1000, ''),
+	(1045, 30002, NULL, 2061004, 2, 60, 1000, ''),
+	(1046, 30002, NULL, 2061004, 2, 61, 1000, ''),
+	(1047, 30002, NULL, 2061004, 2, 62, 1000, ''),
+	(1048, 30002, NULL, 2061004, 2, 63, 1000, ''),
+	(1049, 30002, NULL, 2061004, 2, 53, 975, ''),
+	(1050, 30002, NULL, 2061004, 2, 54, 1000, ''),
+	(1051, 30002, NULL, 2061004, 2, 55, 1000, ''),
+	(1052, 30002, NULL, 2061004, 2, 64, 1000, ''),
+	(1053, 30002, NULL, 2061004, 2, 65, 1000, ''),
+	(1054, 30002, NULL, 2061004, 2, 66, 1000, ''),
+	(1055, 30002, NULL, 2061004, 2, 67, 1000, ''),
+	(1056, 30002, NULL, 2061004, 2, 68, 1000, ''),
+	(1057, 30002, NULL, 2061004, 2, 69, 1000, ''),
+	(1058, 30002, NULL, 2061004, 2, 70, 1000, ''),
+	(1059, 30002, NULL, 2061004, 2, 71, 1000, ''),
+	(1060, 30002, NULL, 2000001, 2, 2, 2, ''),
+	(1061, 30002, NULL, 2000002, 2, 3, 2, ''),
+	(1062, 30002, NULL, 2060000, 2, 4, 2000, ''),
+	(1063, 30002, NULL, 2000004, 2, 5, 1, ''),
+	(1064, 30002, NULL, 2061000, 2, 6, 1398, ''),
+	(1065, 30002, NULL, 2060000, 2, 7, 473, ''),
+	(1066, 30002, NULL, 2061000, 2, 49, 2000, ''),
+	(1067, 30002, NULL, 2061000, 2, 50, 975, ''),
+	(1068, 30002, NULL, 2022245, 2, 51, 30, ''),
+	(1069, 30002, NULL, 2022021, 2, 52, 1, ''),
+	(1070, 30002, NULL, 2000006, 2, 72, 2, ''),
+	(1071, 30002, NULL, 2041005, 2, 73, 1, ''),
+	(1072, 30002, NULL, 2000000, 2, 74, 5, ''),
+	(1073, 30002, NULL, 2022027, 2, 75, 4, ''),
+	(1074, 30002, NULL, 2000003, 2, 76, 2, ''),
+	(1075, 30002, NULL, 2002004, 2, 1, 1, ''),
+	(1076, 30002, NULL, 4000009, 4, 1, 11, ''),
+	(1077, 30002, NULL, 4000068, 4, 2, 2, ''),
+	(1078, 30002, NULL, 4000177, 4, 3, 10, ''),
+	(1079, 30002, NULL, 4020005, 4, 4, 1, ''),
+	(1080, 30002, NULL, 4000012, 4, 5, 1, ''),
+	(1081, 30002, NULL, 4000066, 4, 6, 3, ''),
+	(1082, 30002, NULL, 4010001, 4, 7, 1, ''),
+	(1083, 30002, NULL, 4000064, 4, 8, 3, ''),
+	(1084, 30002, NULL, 4000222, 4, 9, 35, ''),
+	(1085, 30002, NULL, 4020007, 4, 10, 2, ''),
+	(1086, 30002, NULL, 4020002, 4, 11, 3, ''),
+	(1087, 30002, NULL, 4004004, 4, 12, 2, ''),
+	(1088, 30002, NULL, 1041002, -1, -5, 1, ''),
+	(1089, 30002, NULL, 1072005, -1, -7, 1, ''),
+	(1090, 30002, NULL, 1082149, -1, -8, 1, ''),
+	(1091, 30002, NULL, 1462047, -1, -11, 1, ''),
+	(1092, 30002, NULL, 1002019, -1, -1, 1, ''),
+	(1093, 30002, NULL, 1062000, -1, -6, 1, ''),
+	(1157, 30005, NULL, 1082149, 1, 1, 1, ''),
+	(1158, 30005, NULL, 1050018, 1, 2, 1, ''),
+	(1159, 30005, NULL, 1051017, 1, 3, 1, ''),
+	(1160, 30005, NULL, 1122001, 1, 4, 1, ''),
+	(1161, 30005, NULL, 2040807, 2, 1, 7, ''),
+	(1162, 30005, NULL, 2000005, 2, 2, 90, ''),
+	(1163, 30005, NULL, 2000005, 2, 3, 100, ''),
+	(1164, 30005, NULL, 2000005, 2, 4, 100, ''),
+	(1165, 30005, NULL, 2000005, 2, 5, 100, ''),
+	(1166, 30005, NULL, 2000005, 2, 6, 100, ''),
+	(1167, 30005, NULL, 2000005, 2, 7, 100, ''),
+	(1168, 30005, NULL, 2000005, 2, 8, 100, ''),
+	(1169, 30005, NULL, 2000005, 2, 9, 100, ''),
+	(1170, 30005, NULL, 2000005, 2, 10, 100, ''),
+	(1171, 30005, NULL, 2000005, 2, 11, 100, ''),
+	(1172, 30005, NULL, 2000005, 2, 12, 100, ''),
+	(1173, 30005, NULL, 2000005, 2, 13, 100, ''),
+	(1174, 30005, NULL, 2000005, 2, 14, 100, ''),
+	(1175, 30005, NULL, 2000005, 2, 15, 100, ''),
+	(1176, 30005, NULL, 2000005, 2, 16, 100, ''),
+	(1177, 30005, NULL, 2000005, 2, 17, 100, ''),
+	(1178, 30005, NULL, 2000005, 2, 18, 100, ''),
+	(1179, 30005, NULL, 2000005, 2, 19, 100, ''),
+	(1180, 30005, NULL, 2000005, 2, 20, 100, ''),
+	(1181, 30005, NULL, 2000005, 2, 21, 100, ''),
+	(1182, 30005, NULL, 2000005, 2, 22, 100, ''),
+	(1183, 30005, NULL, 2000005, 2, 23, 100, ''),
+	(1184, 30005, NULL, 2000005, 2, 24, 100, ''),
+	(1185, 30005, NULL, 2000005, 2, 25, 100, ''),
+	(1186, 30005, NULL, 2000005, 2, 26, 100, ''),
+	(1187, 30005, NULL, 2000005, 2, 27, 100, ''),
+	(1188, 30005, NULL, 2000005, 2, 28, 100, ''),
+	(1189, 30005, NULL, 2000005, 2, 29, 100, ''),
+	(1190, 30005, NULL, 2000005, 2, 30, 100, ''),
+	(1191, 30005, NULL, 2000005, 2, 31, 100, ''),
+	(1192, 30005, NULL, 2000005, 2, 32, 100, ''),
+	(1193, 30005, NULL, 2000005, 2, 33, 100, ''),
+	(1194, 30005, NULL, 2000005, 2, 34, 100, ''),
+	(1195, 30005, NULL, 2000005, 2, 35, 100, ''),
+	(1196, 30005, NULL, 2000005, 2, 36, 100, ''),
+	(1197, 30005, NULL, 2000005, 2, 37, 100, ''),
+	(1198, 30005, NULL, 2000005, 2, 38, 100, ''),
+	(1199, 30005, NULL, 2000005, 2, 39, 100, ''),
+	(1200, 30005, NULL, 2000005, 2, 40, 100, ''),
+	(1201, 30005, NULL, 2000005, 2, 41, 100, ''),
+	(1202, 30005, NULL, 2000005, 2, 42, 100, ''),
+	(1203, 30005, NULL, 2000005, 2, 43, 100, ''),
+	(1204, 30005, NULL, 2000005, 2, 44, 100, ''),
+	(1205, 30005, NULL, 2000005, 2, 45, 100, ''),
+	(1206, 30005, NULL, 2000005, 2, 46, 100, ''),
+	(1207, 30005, NULL, 2000005, 2, 47, 100, ''),
+	(1208, 30005, NULL, 2000005, 2, 48, 100, ''),
+	(1209, 30005, NULL, 2000005, 2, 49, 100, ''),
+	(1210, 30005, NULL, 2000005, 2, 50, 100, ''),
+	(1211, 30005, NULL, 2000005, 2, 51, 100, ''),
+	(1212, 30005, NULL, 4161001, 4, 1, 1, ''),
+	(1213, 30005, NULL, 1040002, -1, -5, 1, ''),
+	(1214, 30005, NULL, 1060002, -1, -6, 1, ''),
+	(1215, 30005, NULL, 1072005, -1, -7, 1, ''),
+	(1216, 30005, NULL, 1302000, -1, -11, 1, '');
 /*!40000 ALTER TABLE `inventoryitems` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.inventorylog
@@ -358,10 +756,36 @@ CREATE TABLE IF NOT EXISTS `iplog` (
   KEY `accountid` (`accountid`,`ip`),
   KEY `ip` (`ip`),
   CONSTRAINT `iplog_ibfk_1` FOREIGN KEY (`accountid`) REFERENCES `accounts` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.iplog: ~0 rows (approximately)
+-- Dumping data for table odinms.iplog: ~25 rows (approximately)
 /*!40000 ALTER TABLE `iplog` DISABLE KEYS */;
+INSERT INTO `iplog` (`iplogid`, `accountid`, `ip`, `login`) VALUES
+	(1, 1, '127.0.0.1', '2018-11-20 22:45:22'),
+	(2, 1, '127.0.0.1', '2018-11-21 09:38:16'),
+	(3, 1, '/127.0.0.1:53450', '2018-11-21 09:53:43'),
+	(4, 1, '/127.0.0.1:54485', '2018-11-22 10:29:13'),
+	(7, 1, '/127.0.0.1:54558', '2018-11-22 10:34:16'),
+	(10, 1, '/127.0.0.1:54606', '2018-11-22 10:37:41'),
+	(11, 5, '/127.0.0.1:54614', '2018-11-22 10:38:02'),
+	(12, 5, '/127.0.0.1:54725', '2018-11-22 11:02:10'),
+	(13, 5, '/127.0.0.1:54725', '2018-11-22 11:02:32'),
+	(14, 5, '/127.0.0.1:54789', '2018-11-22 11:07:33'),
+	(15, 5, '/127.0.0.1:54842', '2018-11-22 11:12:28'),
+	(16, 5, '/127.0.0.1:54855', '2018-11-22 11:13:18'),
+	(17, 5, '/127.0.0.1:54874', '2018-11-22 11:16:09'),
+	(18, 5, '/127.0.0.1:54886', '2018-11-22 11:16:55'),
+	(19, 1, '/127.0.0.1:54916', '2018-11-22 11:23:56'),
+	(20, 1, '/127.0.0.1:54934', '2018-11-22 11:26:36'),
+	(21, 5, '/127.0.0.1:55002', '2018-11-22 11:31:38'),
+	(22, 5, '/127.0.0.1:55020', '2018-11-22 11:32:07'),
+	(23, 5, '/127.0.0.1:55065', '2018-11-22 11:57:59'),
+	(24, 5, '/127.0.0.1:55076', '2018-11-22 11:59:13'),
+	(25, 5, '/127.0.0.1:55140', '2018-11-22 12:21:40'),
+	(26, 5, '/47.32.118.38:55495', '2018-11-22 19:53:26'),
+	(27, 5, '/47.32.118.38:55543', '2018-11-22 19:58:35'),
+	(28, 5, '/47.32.118.38:55543', '2018-11-22 19:58:39'),
+	(29, 5, '/47.32.118.38:55543', '2018-11-22 19:58:42');
 /*!40000 ALTER TABLE `iplog` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.keymap
@@ -374,10 +798,113 @@ CREATE TABLE IF NOT EXISTS `keymap` (
   PRIMARY KEY (`id`),
   KEY `keymap_ibfk_1` (`characterid`),
   CONSTRAINT `keymap_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=634 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.keymap: ~0 rows (approximately)
+-- Dumping data for table odinms.keymap: ~135 rows (approximately)
 /*!40000 ALTER TABLE `keymap` DISABLE KEYS */;
+INSERT INTO `keymap` (`id`, `characterid`, `key`, `type`, `action`) VALUES
+	(331, 30000, 2, 4, 10),
+	(332, 30000, 3, 4, 12),
+	(333, 30000, 4, 4, 13),
+	(334, 30000, 5, 4, 18),
+	(335, 30000, 6, 4, 21),
+	(336, 30000, 16, 4, 8),
+	(337, 30000, 17, 4, 5),
+	(338, 30000, 18, 4, 0),
+	(339, 30000, 19, 4, 4),
+	(340, 30000, 23, 4, 1),
+	(341, 30000, 25, 4, 19),
+	(342, 30000, 26, 4, 14),
+	(343, 30000, 27, 4, 15),
+	(344, 30000, 30, 5, 52),
+	(345, 30000, 33, 2, 2000005),
+	(346, 30000, 35, 4, 11),
+	(347, 30000, 38, 4, 17),
+	(348, 30000, 40, 4, 16),
+	(349, 30000, 43, 4, 9),
+	(350, 30000, 44, 5, 50),
+	(351, 30000, 45, 5, 51),
+	(352, 30000, 46, 4, 6),
+	(353, 30000, 50, 4, 7),
+	(354, 30000, 51, 4, 2),
+	(355, 30000, 52, 4, 3),
+	(356, 30000, 57, 5, 53),
+	(357, 30000, 59, 6, 100),
+	(358, 30000, 60, 6, 101),
+	(359, 30000, 61, 6, 102),
+	(360, 30000, 62, 6, 103),
+	(361, 30000, 63, 6, 104),
+	(362, 30000, 64, 6, 105),
+	(363, 30000, 65, 6, 106),
+	(499, 30002, 65, 6, 106),
+	(500, 30002, 2, 4, 10),
+	(501, 30002, 23, 4, 1),
+	(502, 30002, 3, 4, 12),
+	(503, 30002, 4, 4, 13),
+	(504, 30002, 5, 4, 18),
+	(505, 30002, 6, 4, 21),
+	(506, 30002, 25, 4, 19),
+	(507, 30002, 26, 4, 14),
+	(508, 30002, 27, 4, 15),
+	(509, 30002, 38, 4, 17),
+	(510, 30002, 40, 4, 16),
+	(511, 30002, 43, 4, 9),
+	(512, 30002, 44, 5, 50),
+	(513, 30002, 50, 4, 7),
+	(514, 30002, 59, 6, 100),
+	(515, 30002, 60, 6, 101),
+	(516, 30002, 61, 6, 102),
+	(517, 30002, 62, 6, 103),
+	(518, 30002, 63, 6, 104),
+	(519, 30002, 64, 6, 105),
+	(520, 30002, 7, 4, 11),
+	(521, 30002, 8, 4, 6),
+	(522, 30002, 11, 4, 8),
+	(523, 30002, 12, 5, 51),
+	(524, 30002, 13, 4, 5),
+	(525, 30002, 24, 4, 0),
+	(526, 30002, 30, 1, 3001005),
+	(527, 30002, 33, 2, 2000005),
+	(528, 30002, 39, 4, 4),
+	(529, 30002, 51, 4, 2),
+	(530, 30002, 52, 4, 3),
+	(531, 30002, 57, 5, 53),
+	(532, 30002, 42, 5, 52),
+	(533, 30002, 56, 1, 3001004),
+	(534, 30002, 81, 2, 2022245),
+	(601, 30005, 65, 6, 106),
+	(602, 30005, 2, 4, 10),
+	(603, 30005, 23, 4, 1),
+	(604, 30005, 3, 4, 12),
+	(605, 30005, 4, 4, 13),
+	(606, 30005, 5, 4, 18),
+	(607, 30005, 6, 4, 21),
+	(608, 30005, 25, 4, 19),
+	(609, 30005, 26, 4, 14),
+	(610, 30005, 27, 4, 15),
+	(611, 30005, 38, 4, 17),
+	(612, 30005, 40, 4, 16),
+	(613, 30005, 43, 4, 9),
+	(614, 30005, 45, 5, 51),
+	(615, 30005, 50, 4, 7),
+	(616, 30005, 59, 6, 100),
+	(617, 30005, 60, 6, 101),
+	(618, 30005, 61, 6, 102),
+	(619, 30005, 62, 6, 103),
+	(620, 30005, 63, 6, 104),
+	(621, 30005, 64, 6, 105),
+	(622, 30005, 7, 4, 6),
+	(623, 30005, 8, 4, 11),
+	(624, 30005, 11, 4, 8),
+	(625, 30005, 12, 5, 50),
+	(626, 30005, 13, 4, 5),
+	(627, 30005, 24, 4, 0),
+	(628, 30005, 30, 5, 52),
+	(629, 30005, 33, 2, 2000005),
+	(630, 30005, 39, 4, 4),
+	(631, 30005, 51, 4, 2),
+	(632, 30005, 52, 4, 3),
+	(633, 30005, 57, 5, 53);
 /*!40000 ALTER TABLE `keymap` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.loginserver
@@ -431,7 +958,7 @@ CREATE TABLE IF NOT EXISTS `monsterdrops` (
   PRIMARY KEY (`monsterdropid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10789 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.monsterdrops: ~9,700 rows (approximately)
+-- Dumping data for table odinms.monsterdrops: ~9,092 rows (approximately)
 /*!40000 ALTER TABLE `monsterdrops` DISABLE KEYS */;
 INSERT INTO `monsterdrops` (`monsterdropid`, `monsterid`, `itemid`, `chance`) VALUES
 	(1, 9400567, 2022251, 600),
@@ -9787,10 +10314,15 @@ CREATE TABLE IF NOT EXISTS `queststatus` (
   PRIMARY KEY (`queststatusid`),
   KEY `characterid` (`characterid`),
   CONSTRAINT `queststatus_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.queststatus: ~0 rows (approximately)
+-- Dumping data for table odinms.queststatus: ~4 rows (approximately)
 /*!40000 ALTER TABLE `queststatus` DISABLE KEYS */;
+INSERT INTO `queststatus` (`queststatusid`, `characterid`, `quest`, `status`, `time`, `forfeited`) VALUES
+	(4, 30002, 1029, 1, 1542903463, 0),
+	(5, 30002, 2136, 1, 1542904561, 0),
+	(6, 30005, 1029, 1, 1542934943, 0),
+	(7, 30005, 2140, 1, 1542935456, 0);
 /*!40000 ALTER TABLE `queststatus` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.queststatusmobs
@@ -9802,10 +10334,13 @@ CREATE TABLE IF NOT EXISTS `queststatusmobs` (
   PRIMARY KEY (`queststatusmobid`),
   KEY `queststatusid` (`queststatusid`),
   CONSTRAINT `queststatusmobs_ibfk_1` FOREIGN KEY (`queststatusid`) REFERENCES `queststatus` (`queststatusid`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.queststatusmobs: ~0 rows (approximately)
+-- Dumping data for table odinms.queststatusmobs: ~2 rows (approximately)
 /*!40000 ALTER TABLE `queststatusmobs` DISABLE KEYS */;
+INSERT INTO `queststatusmobs` (`queststatusmobid`, `queststatusid`, `mob`, `count`) VALUES
+	(2, 5, 210100, 16),
+	(3, 7, 130100, 0);
 /*!40000 ALTER TABLE `queststatusmobs` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.reactordrops
@@ -9946,9 +10481,9 @@ CREATE TABLE IF NOT EXISTS `savedlocations` (
   PRIMARY KEY (`id`),
   KEY `savedlocations_ibfk_1` (`characterid`),
   CONSTRAINT `savedlocations_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.savedlocations: ~0 rows (approximately)
+-- Dumping data for table odinms.savedlocations: ~1 rows (approximately)
 /*!40000 ALTER TABLE `savedlocations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `savedlocations` ENABLE KEYS */;
 
@@ -14527,10 +15062,20 @@ CREATE TABLE IF NOT EXISTS `skills` (
   PRIMARY KEY (`id`),
   KEY `skills_ibfk_1` (`characterid`),
   CONSTRAINT `skills_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.skills: ~0 rows (approximately)
+-- Dumping data for table odinms.skills: ~9 rows (approximately)
 /*!40000 ALTER TABLE `skills` DISABLE KEYS */;
+INSERT INTO `skills` (`id`, `skillid`, `characterid`, `skilllevel`, `masterlevel`) VALUES
+	(7, 3001004, 30002, 1, 0),
+	(8, 3001005, 30002, 20, 0),
+	(9, 3000000, 30002, 3, 0),
+	(10, 3000002, 30002, 8, 0),
+	(11, 3000001, 30002, 19, 0),
+	(12, 3001003, 30002, 1, 0),
+	(13, 1000, 30005, 3, 0),
+	(14, 1002, 30005, 3, 0),
+	(15, 4001344, 30005, 1, 0);
 /*!40000 ALTER TABLE `skills` ENABLE KEYS */;
 
 -- Dumping structure for table odinms.storages
@@ -14542,10 +15087,17 @@ CREATE TABLE IF NOT EXISTS `storages` (
   PRIMARY KEY (`storageid`),
   KEY `accountid` (`accountid`),
   CONSTRAINT `storages_ibfk_1` FOREIGN KEY (`accountid`) REFERENCES `accounts` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table odinms.storages: ~0 rows (approximately)
+-- Dumping data for table odinms.storages: ~6 rows (approximately)
 /*!40000 ALTER TABLE `storages` DISABLE KEYS */;
+INSERT INTO `storages` (`storageid`, `accountid`, `slots`, `meso`) VALUES
+	(1, 1, 16, 0),
+	(2, 5, 16, 0),
+	(3, 5, 16, 0),
+	(4, 5, 16, 0),
+	(5, 5, 16, 0),
+	(6, 5, 16, 0);
 /*!40000 ALTER TABLE `storages` ENABLE KEYS */;
 
 -- Dumping structure for view odinms.readable_cheatlog
