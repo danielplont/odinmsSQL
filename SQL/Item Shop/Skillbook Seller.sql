@@ -1,3 +1,4 @@
+/* Skill books removed 
 INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1338, 2280000, 25000000, 1);
 INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1338, 2280001, 25000000, 2);
 INSERT INTO shopitems (shopid, itemid, price, position) VALUES (1338, 2280002, 25000000, 3);
