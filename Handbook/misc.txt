@@ -129,6 +129,9 @@ ID	Type
 2044003	Two-handed Sword for ATT
 2043703	Wand for Magic Att.
 
+Dark Scrolls
+2040811 30% Gloves for ATT
+2040815 30% Gloves for MATT
 
 Morph Items		
 ID	Name	Monster
@@ -140,24 +143,24 @@ ID	Name	Monster
 		
 Summoning Bags		
 ID	Name	Summons
-2101050	GM event Sack1	“Slime Storm”
-2101051	GM event Sack2	“Mushroom Boom”
-2101052	GM event Sack3	“Pigs in a Blanket”
-2101053	GM event Sack4	“Eye See You”
-2101054	GM event Sack5	“Alien Armada”
-2101055	GM event Sack6	“Toying Around”
-2101056	GM event Sack7	“Crimson Crash”
+2101050	GM event Sack1	ï¿½Slime Stormï¿½
+2101051	GM event Sack2	ï¿½Mushroom Boomï¿½
+2101052	GM event Sack3	ï¿½Pigs in a Blanketï¿½
+2101053	GM event Sack4	ï¿½Eye See Youï¿½
+2101054	GM event Sack5	ï¿½Alien Armadaï¿½
+2101055	GM event Sack6	ï¿½Toying Aroundï¿½
+2101056	GM event Sack7	ï¿½Crimson Crashï¿½
 2100017	Alien Sack	Various Omega Sector Aliens
 2100000	Black Sack	Jr. Balrog
 2100014	Brand New Monster Galore	Gargoyle
 2100016	Different Sack	Various Ludibrium Monsters
-2100001	Monster Sack 1	Various Monsters Lvl 1 – 10
-2100002	Monster Sack 2	Various Monsters Lvl 10 – 20
-2100003	Monster Sack 3	Various Monsters Lvl 20 – 30
-2100004	Monster Sack 4	Various Monsters Lvl 30 – 40
-2100005	Monster Sack 5	Various Monsters Lvl 40 – 50
-2100006	Monster Sack 6	Various Monsters Lvl 50 – 60
-2100007	Monster Sack 7	Various Monsters Lvl 60 – 70
+2100001	Monster Sack 1	Various Monsters Lvl 1 ï¿½ 10
+2100002	Monster Sack 2	Various Monsters Lvl 10 ï¿½ 20
+2100003	Monster Sack 3	Various Monsters Lvl 20 ï¿½ 30
+2100004	Monster Sack 4	Various Monsters Lvl 30 ï¿½ 40
+2100005	Monster Sack 5	Various Monsters Lvl 40 ï¿½ 50
+2100006	Monster Sack 6	Various Monsters Lvl 50 ï¿½ 60
+2100007	Monster Sack 7	Various Monsters Lvl 60 ï¿½ 70
 2101013	Summon Showa Boss	Male Boss (Guy with gun)
 2100015	Summoning "Dances with Balrog's Clone"	Dances with Balrog's Clone
 2101001	Summoning Athena Pierce's Clone	Athena Pierce's Clone
